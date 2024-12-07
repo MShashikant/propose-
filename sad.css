@@ -1,0 +1,144 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Set the background image */
+body {
+    background-image: url('sad.jpg'); /* Replace with the path to your image */
+    background-size: cover;  /* Ensure the image covers the entire background */
+    background-position: center center;  /* Center the background image */
+    background-attachment: fixed;  /* Make the background stay fixed when scrolling */
+    font-family: Arial, sans-serif;
+    color: white;  /* Text color to contrast with the background */
+}
+
+
+
+/* Container for sad message */
+.sad-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Heading Style */
+h1 {
+    color: #ff5e57; /* Sad pinkish-red color */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: shake 0.5s ease-in-out infinite alternate;
+}
+
+/* Sad face style */
+.sad-face {
+    font-size: 5rem; /* Big size for the sad face */
+    color: #ff5e57; /* Pinkish-red color */
+    margin-bottom: 20px;
+    animation: sad-animation 2s infinite alternate;
+}
+
+/* Message Style */
+p { 
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+h2 {
+    color: #9b0a7e;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: shake 0.7s ease-in-out infinite alternate;
+}
+
+/* Button for retry or other action (optional) */
+button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #ff5e57;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+    background-color: #e04e3a;
+}
+
+/* Keyframe animations */
+@keyframes shake {
+    0% { transform: translateX(-10px); }
+    100% { transform: translateX(10px); }
+}
+
+@keyframes sad-animation {
+    0% {
+        transform: scale(1);
+        color: #ff5e57;
+    }
+    100% {
+        transform: scale(1.1);
+        color: #e04e3a; /* A deeper red */
+    }
+}
+
+ /* Responsive Design */
+        /* For mobile devices (up to 600px) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem; /* Slightly smaller heading */
+            }
+
+            .sad-face {
+                font-size: 4rem; /* Smaller sad face */
+            }
+
+            p {
+                font-size: 1.4rem; /* Smaller text for the message */
+            }
+
+            .sad-container {
+                padding: 20px; /* Smaller padding */
+                width: 90%; /* Slightly bigger width */
+            }
+        }
+
+        /* For tablets (600px to 1024px) */
+        @media (max-width: 1024px) and (min-width: 601px) {
+            h1 {
+                font-size: 2.8rem; /* Slightly smaller heading */
+            }
+
+            .sad-face {
+                font-size: 4.5rem; /* Smaller sad face */
+            }
+
+            p {
+                font-size: 1.4rem; /* Slightly smaller text */
+            }
+
+            .sad-container {
+                width: 85%; /* Adjust width for medium screens */
+                padding: 30px; /* Slightly smaller padding */
+            }
+        }
